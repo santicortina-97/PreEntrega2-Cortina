@@ -28,4 +28,4 @@ do{
             alert(nombre + ", solo se dan turnos de Lunes a Viernes")
             break;
     }
-}while(confirm("Su turno ya fue reservado, desea elejir otro?"))
+}while(confirm("Desea elejir otro?"))
