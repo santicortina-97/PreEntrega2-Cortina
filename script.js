@@ -3,11 +3,11 @@ let nombre = prompt("Ingresá tu nombre");
 if(nombre){
     alert("Hola " + nombre + ", elige para que día deseas sacar turno" )
 }else{
-    alert("Porfavos ingresá tu nombre")
+    alert("Porfavor ingresá tu nombre")
 }
 
 do{
-    let elegir = Number(prompt ("Selecciona su turno \n 1- Para Lunes \n 2- Para Martes \n 3- Para Miercoles \n 4- Para Jueves \n 5- Para Viernes"))
+    let elegir = Number(prompt ("Seleccione un turno \n 1- Para Lunes \n 2- Para Martes \n 3- Para Miercoles \n 4- Para Jueves \n 5- Para Viernes"))
     switch (elegir) {
         case 1:
             alert(nombre + ", tienes turno para el día Lunes")
