@@ -3,10 +3,8 @@ alert("Bienvenido a nuestro showrrom, porfavor seleccione un producto de la sigu
 let carrito = [];
 
 do {
-  // Mostrar opciones de productos y solicitar la entrada del usuario
     let entrada = parseInt(prompt("Ingresá el número del producto que deseas agregar: \n 1- Remera Adidas de $6500 \n 2- Buzo Puma de $9000 \n 3- Campera Puma de $25000"));
 
-  // Verificar si la entrada es válida
     switch (entrada) {
         case 1:
             carrito.push({ producto: "Remera Adidas", precio: 6500 });
