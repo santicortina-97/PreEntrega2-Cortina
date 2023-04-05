@@ -1,31 +1,43 @@
-let nombre = prompt("Ingresá tu nombre");
+alert("Bienvenido a nuestro showrrom, porfavor seleccione un producto de la siguiente lista para agregar al carrito:");
 
-if(nombre){
-    alert("Hola " + nombre + ", elige para que día deseas sacar turno" )
-}else{
-    alert("Porfavor ingresá tu nombre")
-}
+let carrito = [];
 
-do{
-    let elegir = Number(prompt ("Seleccione un turno \n 1- Para Lunes \n 2- Para Martes \n 3- Para Miercoles \n 4- Para Jueves \n 5- Para Viernes"))
-    switch (elegir) {
+do {
+  // Mostrar opciones de productos y solicitar la entrada del usuario
+    let entrada = parseInt(prompt("Ingresá el número del producto que deseas agregar: \n 1- Remera Adidas de $6500 \n 2- Buzo Puma de $9000 \n 3- Campera Puma de $25000"));
+
+  // Verificar si la entrada es válida
+    switch (entrada) {
         case 1:
-            alert(nombre + ", tienes turno para el día Lunes")
-            break;
+            carrito.push({ producto: "Remera Adidas", precio: 6500 });
+            alert("Se agregó la Remera Adidas al carrito");
+        break;
         case 2:
-            alert(nombre + ", tienes turno para el día Martes")
-            break;
+            carrito.push({ producto: "Buzo Puma", precio: 9000 });
+            alert("Se agregó el Buzo Puma al carrito");
+        break;
         case 3:
-            alert(nombre + ", tienes turno para el día Miércoles")     
-            break;
-        case 4:
-            alert(nombre + ", tienes turno para el día Jueves")     
-            break;
-        case 5:
-            alert(nombre + ", tienes turno para el día Viernes")     
-            break;
+            carrito.push({ producto: "Campera Puma", precio: 25000 });
+            alert("Se agregó la Campera Puma al carrito");
+        break;
         default:
-            alert(nombre + ", solo se dan turnos de Lunes a Viernes")
-            break;
+            alert("La entrada no es válida");
     }
-}while(confirm("Desea elejir otro?"))
+} while (carrito.length === 0 || confirm("¿Deseas agregar otro producto al carrito?"));
+
+let carritoInfo = "Productos en el carrito:\n";
+
+carrito.forEach( producto => carritoInfo += `- ${producto.producto} ($${producto.precio})\n`);
+
+const porcentajeIva = 21;
+const precioTotal = carrito.reduce((total, producto) => {return total + producto.precio;}, 0);
+
+const precioConIVA = calcularPrecioConIVA(precioTotal, porcentajeIva);
+carritoInfo = carritoInfo.concat('Total: $', precioTotal, ' (IVA incluido: $', precioConIVA, ')');
+
+alert(carritoInfo);
+
+function calcularPrecioConIVA(total, porcentajeIva) {
+    const precioConIVA = total * (1 + porcentajeIva / 100);
+    return precioConIVA;
+}
