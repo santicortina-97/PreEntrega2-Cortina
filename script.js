@@ -1,41 +1,74 @@
-alert("Bienvenido a nuestro showrrom, porfavor seleccione un producto de la siguiente lista para agregar al carrito:");
-
 let carrito = [];
+let listaCarrito = document.getElementById("listaCarrito");
 
-do {
-    let entrada = parseInt(prompt("Ingresá el número del producto que deseas agregar: \n 1- Remera Adidas de $6500 \n 2- Buzo Puma de $9000 \n 3- Campera Puma de $25000"));
 
-    switch (entrada) {
-        case 1:
-            carrito.push({ producto: "Remera Adidas", precio: 6500 });
-            alert("Se agregó la Remera Adidas al carrito");
-        break;
-        case 2:
-            carrito.push({ producto: "Buzo Puma", precio: 9000 });
-            alert("Se agregó el Buzo Puma al carrito");
-        break;
-        case 3:
-            carrito.push({ producto: "Campera Puma", precio: 25000 });
-            alert("Se agregó la Campera Puma al carrito");
-        break;
-        default:
-            alert("La entrada no es válida");
-    }
-} while (carrito.length === 0 || confirm("¿Deseas agregar otro producto al carrito?"));
+function agregarAlCarrito(producto, precio){
+    let productoEnCarrito = {
+        producto: producto,
+        precio: precio
+    };
+    carrito.push(productoEnCarrito);
+    actualizarCarrito();
+    guardarCarritoEnStorage();
+}
 
-let carritoInfo = "Productos en el carrito:\n";
+function agregarRemeraAlCarrito(){
+    agregarAlCarrito("Remera Adidas", 6500);
+}
 
-carrito.forEach( producto => carritoInfo += `- ${producto.producto} ($${producto.precio})\n`);
+function agregarBuzoAlCarrito(){
+    agregarAlCarrito("Buzo Puma", 9000);
+}
 
-const porcentajeIva = 21;
-const precioTotal = carrito.reduce((total, producto) => {return total + producto.precio;}, 0);
+function agregarCamperaAlCarrito(){
+    agregarAlCarrito("Campera Puma", 25000);
+}
 
-const precioConIVA = calcularPrecioConIVA(precioTotal, porcentajeIva);
-carritoInfo = carritoInfo.concat('Total: $', precioTotal, ' (IVA incluido: $', precioConIVA, ')');
+let boton1 = document.getElementById("boton1")
+let boton2 = document.getElementById("boton2")
+let boton3 = document.getElementById("boton3")
 
-alert(carritoInfo);
+boton1.addEventListener("click", agregarRemeraAlCarrito);
+boton2.addEventListener("click", agregarBuzoAlCarrito)
+boton3.addEventListener("click", agregarCamperaAlCarrito)
+
+
+function actualizarCarrito() {
+    listaCarrito.innerHTML = " ";
+    let carritoInfo = "Productos en el carrito:";
+    let precioTotal = 0;
+    carrito.forEach(producto => {
+        carritoInfo += `<li>${producto.producto} ($${producto.precio})</li>`;
+        precioTotal += producto.precio;
+    });
+    const porcentajeIva = 21;
+    let precioConIVA = calcularPrecioConIVA(precioTotal, porcentajeIva);
+    carritoInfo += `<li>Total: $${precioTotal} (IVA incluido: $${precioConIVA})</li>`;
+    listaCarrito.innerHTML = carritoInfo;
+}
 
 function calcularPrecioConIVA(total, porcentajeIva) {
-    const precioConIVA = total * (1 + porcentajeIva / 100);
-    return precioConIVA;
+    let precioConIVA = total * (1 + porcentajeIva / 100);
+    return precioConIVA.toFixed(2);
 }
+
+function guardarCarritoEnStorage() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+
+// Verificar si hay datos en el carrito almacenados en el Storage
+if (localStorage.getItem("carrito")) {
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+    actualizarCarrito();
+}
+
+//Vaciar Carrito
+
+let vaciarCarritoBtn = document.getElementById("vaciarCarrito");
+
+vaciarCarritoBtn.addEventListener ("click", function(){
+        carrito = [];
+    actualizarCarrito();
+    localStorage.removeItem("carrito");
+})
