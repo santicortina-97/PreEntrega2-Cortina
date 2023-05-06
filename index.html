@@ -2,28 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <h2>Lista de Productos</h2>
-    <p>Bienvenido a nuestro showroom, por favor seleccione un producto de la siguiente lista para agregar al carrito:</p>
-    <ul id="listaProductos">
-        <li>
-            <span>Remera Adidas, valor: $6500</span>
-            <button id="boton1" >Agregar al carrito</button>
-        </li>
-        <li>
-            <span>Buzo Puma, valor: $9000</span>
-            <button id="boton2">Agregar al carrito</button>
-        </li>
-        <li>
-            <span>Campera Puma, valor: $25000</span>
-            <button id="boton3">Agregar al carrito</button>
-        </li>
-    </ul>
-    <h2 id="mensajeCarrito">Carrito</h2>
-    <ul id="listaCarrito"></ul>
-    <button id="vaciarCarrito">Vaciar carrito</button>
+    <header>
+        <nav>
+<!--             <img src="./img/SS2.png" alt="" class="logo"> -->
+            <h1>SanixSwatch</h1>
+            <div>
+                <div class="contenedorIcono">
+                    <span class="logoCarrito" id="iconoCarrito"><i class='bx bxs-shopping-bag'></i></span>
+                    <span class="cantidadCarrito" id="contadorProductos">0</span>
+                </div>
+                <div class="contenedorProductos">
+                        <div class="carroProductos">
+                            <div class="listaCarrito">
+                                <ul id="listaCarrito">
+            <!-- Acá va lo agregado al carrito desde JavaScript -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="botonFinal">
+                            <button class="botonVaciar" id="vaciarCarrito">Vaciar Carrito</button>
+                            <button class="botonFinalizar" id="miBoton">Finalizar Compra</button>
+                        </div>
+                </div>
+<!--                 <div class="contenedorProductos">
+                    <div class="filaProductos">
+                        <div class="carroProducto">
+                            <div class="listaCarrito">
+
+                                <ul id="listaCarrito"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botonFinal">
+
+                    </div>
+                </div> -->
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="productos">
+            <div class="caja">
+                <div class="imagen">
+                    <img src="./img/reloj1.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Samsung Galaxy Watch 3</h2>
+                    <p>$40000</p>
+                    <button id="boton1">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="caja">
+                <div class="imagen">
+                    <img src="./img/reloj2.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Samsung Galaxy Watch 4</h2>
+                    <p>$70000</p>
+                    <button id="boton2">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="caja">
+                <div class="imagen">
+                    <img src="./img/reloj3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Samsung Galaxy Watch 5</h2>
+                    <p>$80000</p>
+                    <button id="boton3">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="caja">
+                <div class="imagen">
+                    <img src="./img/reloj4.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Xiaomi Watch S1 Active</h2>
+                    <p>$72100</p>
+                    <button id="boton4">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="caja">
+                <div class="imagen">
+                    <img src="./img/reloj5.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Grow Home Gr68 Negro</h2>
+                    <p>$50000</p>
+                    <button id="boton5">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="caja">
+                <div class="imagen">
+                    <img src="./img/reloj6.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Redmi Smart Band Pro</h2>
+                    <p>$34500</p>
+                    <button id="boton6">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h2>Tienda</h2>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

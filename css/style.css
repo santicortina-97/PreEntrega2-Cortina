@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #f5f1ea;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* .logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  filter: brightness(1.1);
+  margin-left: 10px;
+} */
+
+/* header{
+  position: relative;
+} */
+
+.swal-icon img{
+    border-radius: 50%;
+    filter: brightness(1.1);
+}
+
+header nav{
+    background-color: #fefefe;
+    padding: 15px 20px;
+    margin: 40px;
+    border-radius: 5px;
+    box-shadow: 3px -1px 100px 4px rgba(135, 135, 135, 0.99);
+    display: flex;
+    justify-content: space-between;
+    transition: 1s ease all;
+}
+
+header nav h1{
+    padding: 5px;
+}
+
+.contenedorIcono{
+position: relative;
+}
+
+.logoCarrito{
+    cursor: pointer;
+    color: black;
+    font-size: 30px;
+}
+
+.cantidadCarrito{
+    position: absolute;
+    padding: 2px;
+    font-size: small;
+    top: 55%;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contenedorProductos{
+    position: absolute;
+    right: 50px;
+    background-color: #fff;
+    width: 550px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    display: none;
+}
+
+.carroProducto{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+}
+
+
+
+/* Estilo de JavaScript */
+
+.tituloCarrito{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.carritoItem{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+/* .cantidad{
+margin-left: 0;
+font-size: small;
+background-color: #efeaea;
+color: #000000;
+border-radius: 50%;
+padding: 1px 5px;
+border: 1px solid black;
+} */
+
+.carritoItemDetalle{
+    font-weight: 400;
+/*   font-size: small; */
+}
+
+.carritoItemTotal{
+    font-weight: bold;
+
+}
+
+.carritoTotal{
+    list-style: none;
+    padding: 5px;
+    font-size: medium;
+    font-weight: bold;
+    border-top: 2px solid rgba(0, 0, 0, 0.20);
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+
+
+.menosCarrito{
+    cursor: pointer;
+}
+
+.botonFinal{
+    border-top: 2px solid rgba(0, 0, 0, 0.20);
+    text-align: center;
+}
+
+.botonVaciar{
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    background: rgb(53, 65, 59);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.botonVaciar:hover{
+    background-color: rgb(78, 84, 81);
+}
+
+.botonFinalizar{
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    background: rgb(53, 65, 59);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.botonFinalizar:hover{
+    background-color: rgb(78, 84, 81);
+}
+
+
+.productos{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: auto;
+    gap: 100px;
+    justify-content: center;
+}
+
+.caja{
+    background: #f0eae0;
+    border: 2px solid black;
+    border-radius: 50px;
+    /*     padding: 5px; */
+    text-align: center;
+}
+
+.caja:hover{
+    box-shadow: 0px -1px 26px 0px rgba(75, 88, 79, 0.99);
+
+}
+
+/* .caja:hover{
+box-shadow: 0px -1px 26px 0px rgba(0, 0, 0, 0.76);
+}
+.caja:hover img{
+transform: scale(0.9);
+} */
+
+
+
+.imagen img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+.caja:hover img{
+    transform: scale(0.9);
+}
+
+.info{
+    border-top: 2px solid rgba(0, 0, 0, 0.57);
+  /* box-shadow: 0px 0px 22px -1px rgba(0,0,0,0.57); */
+}
+
+.info h2{
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.info p{
+    font-size: 19px;
+    margin: 10px;
+    font-weight: bold;
+
+}
+
+.info button{
+    margin: 10px auto 20px;
+    /*     margin: 15px; */
+    cursor: pointer;
+    border: none;
+    background: rgb(53, 65, 59);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.info button:hover{
+    background-color: rgb(78, 84, 81);
+}
+
+footer{
+    margin-top: 20px;
+    background: #e8dece;
+    }
+    /* background: #ddd6cb; */
+    footer h2{
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* background: #ddd6cb; */
+/* background: #c7c5c0; */
+.btnVolver{
+    margin: 10px;
+    padding: 10px;
+}
+
+.volver{
+    text-decoration: none;
+    font-size: 15px;
+    background: #cbcbca;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: black;
+    transition: 0.5s;
+}
+.volver:hover{
+/*   transform: scale(0.9); */
+    background: #ddd6cb;
+}
+
+.elementos{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+table{
+    margin: 5px;
+    /*   padding: 5px; */
+    border-collapse: collapse;
+    /*   border: 1px solid black; */
+    border-radius: 10px;
+    background: #f5f3f0;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+
+
+
+th{
+    padding: 10px 10px;
+    /*   font-weight: 700; */
+    font-size: 17px;
+    text-transform: uppercase;
+    border-bottom: black 1px solid;
+}
+
+/* .productoTh{
+  background: #dfddd8;
+} */
+
+.productoTd{
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+.totalTd{
+    border-top: black 1px solid;
+    font-weight: bold;
+    font-size: 17px;
+    /*   font-weight: 700; */
+    text-transform: uppercase;
+    /*   background: #dfddd8; */
+
+}
+
+
+
+.carritoPago{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+.carritoPagoTitulo{
+    display: flex;
+    justify-content: space-between;
+}
+/* .carritoCantidad{
+
+} */
+
+
+
+
+
+/* Finalizar Compra */
+
+.datosFinales{
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario{
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+
+.formulario label{
+    display: block;
+    color: #7d8994;
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+}
+
+.formulario input{
+    border: 2px solid #ced6e0;
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.formulario input:hover,
+.formulario select:hover{
+    border: 2px solid #939393;
+}
+
+.formulario input:focus,
+.formulario select:focus{
+    box-shadow: 0px 0px 10px 0px rgba(147,147,147,1);
+}
+
+
+
+.formulario select{
+    border: 2px solid #ced6e0;
+    font-size: 15px;
+    height: 30px;
+    width: 20%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.botonFinalizarCompra{
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    background: rgb(53, 65, 59);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.botonFinalizarCompra:hover{
+    background-color: rgb(78, 84, 81);
+}
+
+.pagoTarjeta{
+    display: none;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos de las tarjetas */
+
+.tarjeta{
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #fff;
+    transition: .3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tarjeta.active{
+    transform: rotateY(180deg);
+}
+
+.tarjeta > div{
+    padding: 0 30px 30px 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+}
+
+/* TARJETA DELANTERA */
+
+.tarjeta .delantera{
+    background: url(../img/fondoTarjeta.jpg);
+    background-size: cover;
+}
+
+.delantera .logo{
+    text-align: right;
+    min-height: 50px;
+}
+
+.delantera .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+}
+
+.delantera .chip{
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+    /*   margin-bottom: 30px; */
+}
+
+.delantera .label{
+    font-size: 16px;
+    color: #7d8994;
+    margin-bottom: 5px;
+}
+
+.delantera .numero{
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+.delantera .nombre{
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+
+.delantera .expiracion{
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.delantera .flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* TARJETA TRASERA */
+.trasera{
+    width: 90%;
+    background: url(../img/fondoTarjeta.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.trasera .barraMagnetica{
+    height: 40px;
+    background: grey;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.trasera .datos{
+    align-items: center;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trasera .datos p{
+    margin-bottom: 5px;
+}
+
+
+.trasera .datos .firma{
+    width: 70%;  
+    height: 40px;
+    background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+
+.trasera .datos .grupoCvv{
+    width: 20%;
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+} 
+
+
+/* FORMULARIO DE TARJETA */
+
+.formularioTarjeta{
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -100px;
+}
+
+.formularioTarjeta label{
+    display: block;
+    color: #7d8994;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.formularioTarjeta input,
+.formularioTarjeta select{
+    border: 2px solid #ced6e0;
+    font-size: 15px;
+    height: 50px;
+    width: 100%;
+    /*   padding: 5px 12px; */
+    /*   transition: .3s ease all; */
+    border-radius: 5px;
+}
+
+.formularioTarjeta input:hover,
+.formularioTarjeta select:hover{
+    border: 2px solid #939393;
+}
+
+.formularioTarjeta input:focus,
+.formularioTarjeta select:focus{
+    box-shadow: 0px 0px 10px 0px rgba(147,147,147,1);
+}
+
+.formularioTarjeta input{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.formularioTarjeta .flexBox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formularioTarjeta .expira{
+    width: 100%;
+}
+
+.formularioTarjeta .cvv{
+    min-width: 100px;
+}
+
+.formularioTarjeta .grupoSelect{
+    width: 100%;
+    margin-right: 15px;
+}
+
+.btnEnviar{
+    border: none;
+    /*   padding: 10px; */
+    font-size: 15px;
+    color: #fff;
+    background: rgb(53, 65, 59);
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    /*   margin-top: -100px; */
+}
+
+.btnEnviar:hover{
+    background-color: rgb(78, 84, 81);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+    .productos{
+        grid-template-columns: 350px 350px;
+        grid-template-rows: auto;
+        gap: 100px;
+        justify-content: center;
+    }
+} 
+
+@media screen and (max-width: 800px){
+    .productos{
+        grid-template-columns: 350px;
+        grid-template-rows: auto;
+        gap: 100px;
+        justify-content: center;
+    }
+} 
+
+@media screen and (max-width: 600px){
+    .contenedorProductos{
+        width: 400px;
+        font-size: 12px;
+    }
+} 
+
+
+
+@media screen and (max-width: 440px){
+    .productos{
+        grid-template-columns: 300px;
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+    .contenedorProductos{
+        width: 350px;
+        font-size: 10px;
+        right: 0;
+    }
+} 
+
+
+
+
+

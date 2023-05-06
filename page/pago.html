@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="btnVolver">
+        <a href="../index.html" class="volver">Volver</a>
+    </div>
+    <div>
+        <p id="contador">00:00</p>
+    </div>
+    <div >
+
+    </div>
+            <div  class="elementos">
+                <table id="elements">
+                    <thead>
+                        <tr>
+
+                        </tr>
+                    </thead>
+                </table>
+            </div>    
+    <section>
+            <div class="datosFinales">
+                <form action="" class="formulario" id="formularioFinalizar">
+                    <div>
+                        <label for="">Nombre</label>                    
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="">Apellido</label>                    
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div>
+                        <label for="">Correo Electrónico</label>                    
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="">Dirección de Facturación</label>                    
+                        <input type="text"id="direccion" name="direccion" required>
+                    </div>
+                    <div>
+                        <label for="">Método de Pago</label>  
+                        <select name="Forma de Pago" id="formaPago">
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                        </select>                  
+                    </div>
+                    <button class="botonFinalizarCompra" id="botonFinalizar" type="submit">Finalizar Pedido</button>
+                </form>
+            
+            </div>
+        <!-- PAGO TARJETA -->
+        <div class="pagoTarjeta">
+            <div class="contenedor">
+                <section class="tarjeta" id="tarjeta">
+                    <div class="delantera">
+                        <div class="logo" id="logo">
+                        </div>
+                        <img src="../img/chip-tarjeta.png" class="chip" alt="">
+                        <div class="datos">
+                            <div class="grupo" id="numero">
+                                <p class="label">Número Tarjeta</p>
+                                <p class="numero" id="numeroTarjeta"></p>
+                            </div>
+                            <div class="flex">
+                                <div class="grupo" id="nombre">
+                                    <p class="label">Nombre</p>
+                                    <p class="nombre" id="nombreTarjeta"></p>
+                                </div>
+                                <div class="grupo" id="Expiracion">
+                                    <p class="label">Expiración</p>
+                                    <p class="expiracion"><span class="mes" id="mes">MM</span> / <span class="year" id="year">AA</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trasera">
+                        <div class="barraMagnetica"></div>
+                        <div class="datos">
+                            <div class="grupo firma" id="firma">
+                            </div>
+                            <div class="grupo grupoCvv">
+                                <p id="agregarCvv"></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <form action="" id="formularioTarjeta" class="formularioTarjeta">
+                    <div class="grupo">
+                        <label for="inputNumero">Número Tarjeta</label>
+                        <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required>
+                    </div>
+                    <div class="grupo">
+                        <label for="inputNombre">Nombre</label>
+                        <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required>
+                    </div>
+                    <div class="flexBox">
+                        <div class="grupo expira">
+                            <label for="selectMes">Expiracion</label>
+                            <div class="flexBox">
+                                <div class="grupoSelect">
+                                    <select name="mes" id="selectMes" required>
+                                        <option disabled selected>Mes</option>
+                                    </select>
+                                </div>
+                                <div class="grupoSelect">
+                                    <select name="year" id="selectYear" required>
+                                        <option disabled selected>Año</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grupo cvv">
+                            <label for="inputCVV">CVV</label>
+                            <input type="text" id="inputCVV" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btnEnviar" id="botonEnviarDatos">Enviar</button>
+                </form>
+                
+            </div>            
+        </div>
+
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../pago.js"></script>
+</body>
+</html>

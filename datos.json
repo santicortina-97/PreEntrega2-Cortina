@@ -1,0 +1,44 @@
+[
+    {
+        "nombre": "Samsung Galaxy Watch 3",
+        "precio": 40000,
+        "idBoton": "boton1",
+        "icono": "<i class='bx bx-minus'></i>"
+        
+    },
+    {
+        "nombre": "Samsung Galaxy Watch 4",
+        "precio": 70000,
+        "idBoton": "boton2",
+        "icono": "<i class='bx bx-minus'></i>"
+        
+    },
+    {
+        "nombre": "Samsung Galaxy Watch 5",
+        "precio": 80000,
+        "idBoton": "boton3",
+        "icono": "<i class='bx bx-minus'></i>"
+        
+    },
+    {
+        "nombre": "Xiaomi Watch S1 Active",
+        "precio": 72100,
+        "idBoton": "boton4",
+        "icono": "<i class='bx bx-minus'></i>"
+        
+    },
+    {
+        "nombre": "Grow Home Gr68 Negro",
+        "precio": 50000,
+        "idBoton": "boton5",
+        "icono": "<i class='bx bx-minus'></i>"
+        
+    },
+    {
+        "nombre": "Redmi Smart Band Pro",
+        "precio": 34500,
+        "idBoton": "boton6",
+        "icono": "<i class='bx bx-minus'></i>"
+        
+    }
+]
