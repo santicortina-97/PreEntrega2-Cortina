@@ -10,17 +10,6 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-/* .logo{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  filter: brightness(1.1);
-  margin-left: 10px;
-} */
-
-/* header{
-  position: relative;
-} */
 
 .swal-icon img{
     border-radius: 50%;
@@ -84,7 +73,6 @@ position: relative;
 }
 
 
-
 /* Estilo de JavaScript */
 
 .tituloCarrito{
@@ -99,19 +87,9 @@ position: relative;
     padding: 10px 15px;
 }
 
-/* .cantidad{
-margin-left: 0;
-font-size: small;
-background-color: #efeaea;
-color: #000000;
-border-radius: 50%;
-padding: 1px 5px;
-border: 1px solid black;
-} */
 
 .carritoItemDetalle{
     font-weight: 400;
-/*   font-size: small; */
 }
 
 .carritoItemTotal{
@@ -128,9 +106,6 @@ border: 1px solid black;
     margin-top: 15px;
     text-align: center;
 }
-
-
-
 
 .menosCarrito{
     cursor: pointer;
@@ -181,7 +156,6 @@ border: 1px solid black;
     background: #f0eae0;
     border: 2px solid black;
     border-radius: 50px;
-    /*     padding: 5px; */
     text-align: center;
 }
 
@@ -189,15 +163,6 @@ border: 1px solid black;
     box-shadow: 0px -1px 26px 0px rgba(75, 88, 79, 0.99);
 
 }
-
-/* .caja:hover{
-box-shadow: 0px -1px 26px 0px rgba(0, 0, 0, 0.76);
-}
-.caja:hover img{
-transform: scale(0.9);
-} */
-
-
 
 .imagen img{
     width: 300px;
@@ -213,7 +178,7 @@ transform: scale(0.9);
 
 .info{
     border-top: 2px solid rgba(0, 0, 0, 0.57);
-  /* box-shadow: 0px 0px 22px -1px rgba(0,0,0,0.57); */
+
 }
 
 .info h2{
@@ -232,7 +197,6 @@ transform: scale(0.9);
 
 .info button{
     margin: 10px auto 20px;
-    /*     margin: 15px; */
     cursor: pointer;
     border: none;
     background: rgb(53, 65, 59);
@@ -249,19 +213,17 @@ footer{
     margin-top: 20px;
     background: #e8dece;
     }
-    /* background: #ddd6cb; */
-    footer h2{
+
+footer p{
     padding: 5px;
     text-align: center;
 }
 
+.volverContador{
+    display: flex;
+    justify-content: space-between;
+}
 
-
-
-
-
-/* background: #ddd6cb; */
-/* background: #c7c5c0; */
 .btnVolver{
     margin: 10px;
     padding: 10px;
@@ -277,8 +239,14 @@ footer{
     transition: 0.5s;
 }
 .volver:hover{
-/*   transform: scale(0.9); */
     background: #ddd6cb;
+}
+
+.contador{
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+    color: rgb(17, 68, 17);
 }
 
 .elementos{
@@ -289,9 +257,7 @@ footer{
 
 table{
     margin: 5px;
-    /*   padding: 5px; */
     border-collapse: collapse;
-    /*   border: 1px solid black; */
     border-radius: 10px;
     background: #f5f3f0;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
@@ -301,15 +267,10 @@ table{
 
 th{
     padding: 10px 10px;
-    /*   font-weight: 700; */
     font-size: 17px;
     text-transform: uppercase;
     border-bottom: black 1px solid;
 }
-
-/* .productoTh{
-  background: #dfddd8;
-} */
 
 .productoTd{
     padding: 10px;
@@ -320,10 +281,7 @@ th{
     border-top: black 1px solid;
     font-weight: bold;
     font-size: 17px;
-    /*   font-weight: 700; */
     text-transform: uppercase;
-    /*   background: #dfddd8; */
-
 }
 
 
@@ -338,12 +296,6 @@ th{
     display: flex;
     justify-content: space-between;
 }
-/* .carritoCantidad{
-
-} */
-
-
-
 
 
 /* Finalizar Compra */
@@ -484,7 +436,6 @@ th{
     width: 100%;
     max-width: 50px;
     margin-bottom: 20px;
-    /*   margin-bottom: 30px; */
 }
 
 .delantera .label{
@@ -592,8 +543,6 @@ th{
     font-size: 15px;
     height: 50px;
     width: 100%;
-    /*   padding: 5px 12px; */
-    /*   transition: .3s ease all; */
     border-radius: 5px;
 }
 
@@ -632,7 +581,6 @@ th{
 
 .btnEnviar{
     border: none;
-    /*   padding: 10px; */
     font-size: 15px;
     color: #fff;
     background: rgb(53, 65, 59);
@@ -640,15 +588,11 @@ th{
     height: 50px;
     width: 100%;
     border-radius: 5px;
-    /*   margin-top: -100px; */
 }
 
 .btnEnviar:hover{
     background-color: rgb(78, 84, 81);
 }
-
-
-
 
 
 
